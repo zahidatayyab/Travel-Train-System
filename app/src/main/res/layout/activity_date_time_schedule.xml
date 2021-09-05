@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateTimeSchedule"
+    android:background="@color/colorAppGreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ScheduleSelectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TTS.AppBarOverlay"
+        android:background="@color/colorAppGreen">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick Date and Time"
+                android:layout_centerVertical="true"
+                android:id="@+id/ScheduleTitle"
+                android:textSize="22sp"
+                android:textColor="@color/colorOrange"
+                tools:ignore="RtlSymmetry">
+            </TextView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ScheduleSelectionBar">
+
+        <TextView
+            android:text="Select Date:"
+            android:textColor="@color/white"
+            android:layout_margin="20sp"
+            android:textSize="15sp"
+            android:layout_row="0"
+            android:layout_column="0">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="20sp"
+            android:background="@color/colorOrange"
+            android:padding="20sp"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:focusable="true"
+            android:clickable="true"
+            android:onClick="DateHandler"
+            android:id="@+id/scheduleDate">
+
+        </TextView>
+
+        <TextView
+            android:text="Select Time:"
+            android:textColor="@color/white"
+            android:layout_margin="20sp"
+            android:textSize="15sp"
+            android:layout_row="2"
+            android:layout_column="0">
+        </TextView>
+
+        <TextView
+            android:text="Time"
+            android:id="@+id/scheduleTime"
+            android:onClick="TimeHandler"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:padding="20sp"
+            android:layout_margin="20sp"
+            android:textSize="15sp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:background="@color/colorOrange"
+            android:focusable="true"
+            android:clickable="true">
+        </TextView>
+
+        <Button
+            android:layout_column="0"
+            android:layout_row="4"
+            android:backgroundTint="@color/colorOrange"
+            android:text="Next"
+            android:textColor="@color/black"
+            android:layout_width="200sp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="ScheduleNextHandler">
+
+        </Button>
+
+    </GridLayout>
+</RelativeLayout>

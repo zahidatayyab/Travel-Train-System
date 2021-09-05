@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentReceipt"
+    android:background="@color/colorAppGreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAYMENT RECEIPT"
+                android:textColor="@color/colorOrange"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:id="@+id/paymenttitle">
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_below="@+id/paymenttitle"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                app:cardBackgroundColor="@color/colorOrange">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_margin="5sp">
+
+                    <TextView
+                        android:id="@+id/minititle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
+                        android:text="Uber Mini"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_below="@+id/minititle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car1PickAdd"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1PickAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="To"
+                        android:id="@+id/to"
+                        android:textStyle="bold"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car1DropAdd"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1DropAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driver Name: "
+                        android:id="@+id/drivernametitle"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1DropAdd"
+                        android:layout_toEndOf="@+id/drivernametitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/driver1Name"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/driver1Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car License Plate: "
+                        android:id="@+id/carlicenseplate"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/driver1Name"
+                        android:layout_toEndOf="@+id/carlicenseplate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/car1License"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1License"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment: "
+                        android:id="@+id/paymenttitle1"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1License"
+                        android:layout_toEndOf="@+id/paymenttitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/payment1"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/payment1"
+                        android:id="@+id/pickuptime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PickUp Time: "
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/payment1"
+                        android:layout_toEndOf="@+id/pickuptime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/pickup1"
+                        android:textSize="12sp">
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_below="@+id/pickup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DropOff Time: "
+                        android:id="@+id/dropofftitle1"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/pickup1"
+                        android:layout_toEndOf="@+id/dropofftitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/dropOff1"
+                        android:textSize="12sp">
+                    </TextView>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_below="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="20sp"
+                android:layout_marginTop="30sp"
+                app:cardBackgroundColor="@color/colorOrange">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp">
+
+                    <TextView
+                        android:id="@+id/minititle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Air Lift"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_below="@+id/minititle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car1PickAdd1"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1PickAdd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To"
+                        android:id="@+id/to1"
+                        android:textStyle="bold"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/to1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car1DropAdd1"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1DropAdd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driver Name: "
+                        android:id="@+id/drivernametitle1"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1DropAdd1"
+                        android:layout_toEndOf="@+id/drivernametitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/driver1Name1"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/driver1Name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car License Plate: "
+                        android:id="@+id/carlicenseplate1"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/driver1Name1"
+                        android:layout_toEndOf="@+id/carlicenseplate1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/car1License1"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1License1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment: "
+                        android:id="@+id/paymenttitle11"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1License1"
+                        android:layout_toEndOf="@+id/paymenttitle11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/payment11"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/payment11"
+                        android:id="@+id/pickuptime11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PickUp Time: "
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/payment11"
+                        android:layout_toEndOf="@+id/pickuptime11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/pickup11"
+                        android:textSize="12sp">
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_below="@+id/pickup11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DropOff Time: "
+                        android:id="@+id/dropofftitle11"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/pickup11"
+                        android:layout_toEndOf="@+id/dropofftitle11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/dropOff11"
+                        android:textSize="12sp">
+                    </TextView>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_below="@+id/card2"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="20sp"
+                android:layout_margin="20sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                app:cardBackgroundColor="@color/colorOrange">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp">
+
+                    <TextView
+                        android:id="@+id/minititle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Uber Mini"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_below="@+id/minititle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car1PickAdd2"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1PickAdd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To"
+                        android:id="@+id/to2"
+                        android:textStyle="bold"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/to2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/car1DropAdd2"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1DropAdd2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driver Name: "
+                        android:id="@+id/drivernametitle2"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1DropAdd2"
+                        android:layout_toEndOf="@+id/drivernametitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/driver1Name2"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/driver1Name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car License Plate: "
+                        android:id="@+id/carlicenseplate2"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/driver1Name2"
+                        android:layout_toEndOf="@+id/carlicenseplate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/car1License2"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1License2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment: "
+                        android:id="@+id/paymenttitle12"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/car1License2"
+                        android:layout_toEndOf="@+id/paymenttitle12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/payment12"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/payment12"
+                        android:id="@+id/pickuptime12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PickUp Time: "
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/payment12"
+                        android:layout_toEndOf="@+id/pickuptime12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/pickup12"
+                        android:textSize="12sp">
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_below="@+id/pickup12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DropOff Time: "
+                        android:id="@+id/dropofftitle12"
+                        android:textSize="12sp"
+                        android:textStyle="bold">
+                    </TextView>
+
+                    <TextView
+                        android:layout_below="@+id/pickup12"
+                        android:layout_toEndOf="@+id/dropofftitle12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:id="@+id/dropOff12"
+                        android:textSize="12sp">
+                    </TextView>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_below="@+id/card3"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/button"
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/colorOrange"
+                android:onClick="handleDetailsViewRouteNext"
+                android:text="Continue" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

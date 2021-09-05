@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EconomyRoute"
+    android:background="@color/colorAppGreen">
+
+    <fragment
+        android:id="@+id/mapRide"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DeliverTo"
+        android:layout_above="@+id/rideDetailsCardView"
+        android:layout_below="@+id/CompaniesSelectionBar"/>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/CompaniesSelectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TTS.AppBarOverlay"
+        android:background="@color/colorAppGreen">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Waiting for Car Driver"
+                android:layout_centerVertical="true"
+                android:id="@+id/RouteTitle"
+                android:textSize="22sp"
+                android:textColor="@color/colorOrange"
+                tools:ignore="RtlSymmetry">
+            </TextView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:id="@+id/rideDetailsCardView"
+        android:layout_height="150sp"
+        app:cardBackgroundColor="@color/colorAppGreen"
+        android:layout_alignParentBottom="true">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick up Time: "
+                android:id="@+id/VanPickupTimeTitle"
+                android:textColor="@color/colorOrange"
+                android:layout_column="0"
+                android:layout_row="0">
+            </TextView>
+            <TextView
+                android:layout_marginStart="5sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_column="1"
+                android:layout_row="0"
+                android:id="@+id/VanPickupTime"
+                android:textColor="@color/white">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approx Drop Off Time:"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:id="@+id/carDropOffTitle"
+                android:textColor="@color/colorOrange">
+            </TextView>
+            <TextView
+                android:layout_marginStart="5sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_column="1"
+                android:layout_row="1"
+                android:id="@+id/carDropOff"
+                android:textColor="@color/white">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver Name:"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:id="@+id/DriverNameTitle"
+                android:textColor="@color/colorOrange">
+            </TextView>
+            <TextView
+                android:layout_marginStart="5sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/DriverName"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:textColor="@color/white">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver Mobile:"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:id="@+id/DriverMobileTitle"
+                android:textColor="@color/colorOrange">
+            </TextView>
+            <TextView
+                android:layout_marginStart="5sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/DriverMobile"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="handleCallDriverButton"
+                android:layout_column="1"
+                android:layout_row="3"
+                android:textColor="@color/colorGreen">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number Plate:"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:id="@+id/LicenseTitle"
+                android:textColor="@color/colorOrange">
+            </TextView>
+            <TextView
+                android:layout_marginStart="5sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/License"
+                android:layout_column="1"
+                android:layout_row="4"
+                android:textColor="@color/white">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_marginTop="2dp"
+                android:paddingLeft="90dp"
+                app:srcCompat="@drawable/call" />
+        </GridLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

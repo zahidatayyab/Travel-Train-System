@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsViewRoute"
+    android:background="@color/colorAppGreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/DetailsViewSelectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TTS.AppBarOverlay"
+        android:background="@color/colorAppGreen">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:layout_centerVertical="true"
+                android:id="@+id/DetailViewTitle"
+                android:textSize="22sp"
+                android:textColor="@color/colorOrange"
+                tools:ignore="RtlSymmetry">
+            </TextView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/DetailsViewSelectionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="100sp"
+                android:id="@+id/DateTitleDetails"
+                android:text="Date"
+                android:textColor="@color/white"
+                android:layout_margin="10sp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/DetailsDate"
+                android:layout_width="272dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="10sp"
+                android:layout_toEndOf="@+id/DateTitleDetails"
+                android:text="-"
+                android:textColor="@color/colorOrange"
+                android:textSize="13sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Uber1CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DateTitleDetails"
+                app:cardBackgroundColor="@color/colorOrange"
+                android:layout_margin="5sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/UberTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5sp"
+                        android:text="Uber Mini"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CarPickupAddTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/UberTitle"
+                        android:layout_margin="5sp"
+                        android:text="Pickup:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CarPickupAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/UberTitle"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/CarPickupAddTitle"
+                        android:text="-"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carDropOffTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CarPickupAdd"
+                        android:layout_margin="5sp"
+                        android:text="DropOff:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carDropOff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CarPickupAdd"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carDropOffTitle"
+                        android:text="-"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carTimeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDropOff"
+                        android:layout_margin="5sp"
+                        android:text="Pickup Time:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDropOff"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carTimeTitle"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carDistanceTimeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carTime"
+                        android:layout_margin="5sp"
+                        android:text="Distance/Time:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carDistanceTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carTime"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carDistanceTimeTitle"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carChargesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDistanceTime"
+                        android:layout_margin="5sp"
+                        android:text="Charges Approx:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carCharges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDistanceTime"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carChargesTitle"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/CarLicenseTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carChargesTitle"
+                        android:layout_margin="5sp"
+                        android:text="Number Plate:"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/CarLicense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carChargesTitle"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/CarLicenseTitle"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/AirLiftCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Uber1CardView"
+                app:cardBackgroundColor="@color/colorOrange"
+                android:layout_margin="5sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="AirLift"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="16sp"
+                        android:id="@+id/AirliftTitle"/>
+
+                    <TextView
+                        android:layout_below="@+id/AirliftTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textStyle="bold"
+                        android:text="Seat # 14"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/vanSeatNumber"/>
+
+                    <TextView
+                        android:layout_below="@+id/vanSeatNumber"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Pickup:"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/vanPickUpTitle"/>
+
+                    <TextView
+                        android:layout_toEndOf="@+id/vanPickUpTitle"
+                        android:layout_below="@+id/vanSeatNumber"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/vanPickUp"/>
+
+
+                    <TextView
+                        android:layout_below="@+id/vanPickUp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="DropOff:"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/vanDropOffTitle"/>
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:layout_margin="05sp"
+                        android:layout_below="@+id/vanPickUp"
+                        android:textSize="13sp"
+                        android:layout_toEndOf="@+id/vanDropOffTitle"
+                        android:id="@+id/vanDropOff"/>
+
+
+                    <TextView
+                        android:layout_below="@+id/vanDropOff"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="PickUp Time:"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/VanPickupTimeTitle"/>
+
+                    <TextView
+                        android:layout_toEndOf="@+id/VanPickupTimeTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:layout_below="@+id/vanDropOff"
+                        android:id="@+id/VanPickupTime"/>
+
+                    <TextView
+                        android:layout_below="@+id/VanPickupTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Distance/Time:"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/VanDistanceTimeTitle"/>
+
+                    <TextView
+                        android:layout_toEndOf="@+id/VanDistanceTimeTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/VanDistanceTime"
+                        android:layout_below="@+id/VanPickupTime"/>
+
+                    <TextView
+                        android:layout_below="@+id/VanDistanceTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Charges Approx"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:textSize="13sp"
+                        android:id="@+id/VanApproxChargesTitle"/>
+
+                    <TextView
+                        android:layout_toEndOf="@+id/VanApproxChargesTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="60 Rs"
+                        android:textColor="@color/black"
+                        android:layout_margin="5sp"
+                        android:layout_below="@+id/VanDistanceTime"
+                        android:textSize="13sp"
+                        android:id="@+id/VanApproxCharges"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Uber2CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AirLiftCard1"
+                app:cardBackgroundColor="@color/colorOrange"
+                android:layout_margin="5sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Uber2Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5sp"
+                        android:text="Uber Mini"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CarPickup2AddTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Uber2Title"
+                        android:layout_margin="5sp"
+                        android:text="Pickup:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CarPickupAdd2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Uber2Title"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/CarPickup2AddTitle"
+                        android:text="-"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carDropOffTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CarPickupAdd2"
+                        android:layout_margin="5sp"
+                        android:text="DropOff:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carDropOff2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/CarPickupAdd2"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carDropOffTitle2"
+                        android:text="-"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carTimeTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDropOff2"
+                        android:layout_margin="5sp"
+                        android:text="Pickup Time:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carTime2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDropOff2"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carTimeTitle2"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carDistanceTimeTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carTime2"
+                        android:layout_margin="5sp"
+                        android:text="Distance/Time:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carDistanceTime2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carTime2"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carDistanceTimeTitle2"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/carChargesTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDistanceTime2"
+                        android:layout_margin="5sp"
+                        android:text="Charges Approx:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carCharges2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carDistanceTime2"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/carChargesTitle2"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/CarLicenseTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carChargesTitle2"
+                        android:layout_margin="5sp"
+                        android:text="Number Plate:"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/CarLicense2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carChargesTitle2"
+                        android:layout_margin="5sp"
+                        android:layout_toEndOf="@+id/CarLicenseTitle2"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_below="@+id/Uber2CardView"
+                android:layout_width="200sp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/colorOrange"
+                android:onClick="handleDetailsViewRouteNext"/>
+
+
+            <Button
+                android:layout_below="@+id/nextButton"
+                android:layout_width="200sp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:text="Cancel Ride"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/colorOrange"
+                android:onClick="cancelation"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

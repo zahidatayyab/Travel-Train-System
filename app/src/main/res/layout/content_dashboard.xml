@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_dashboard"
+    android:background="@color/colorAppGreen">
+
+    <fragment
+        android:id="@+id/homeScreenMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Home"
+        android:layout_above="@+id/selectLocationTitle"/>
+
+    <TextView
+        android:id="@+id/selectLocationTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Select Location!"
+        android:textSize="22sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorOrange"
+        android:layout_above="@+id/dashboardCardView">
+    </TextView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dashboardCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="20sp"
+        android:layout_margin="20sp"
+        android:clickable="false"
+        android:focusable="false"
+        android:checkable="false"
+        app:cardBackgroundColor="@color/colorOrange">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginTop="20sp"
+                android:layout_marginStart="30sp"
+                android:layout_marginEnd="30sp"
+                app:errorEnabled="true"
+                android:hint="Pick Up"
+                android:textColorHint="@color/colorAppGreen"
+                app:boxStrokeColor="@color/colorAppGreen"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:color="@color/colorAppGreen"
+                    android:textColor="@color/colorBlack"
+                    android:id="@+id/dashboardPickUp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:onClick="OnSelectPickUp"
+                    >
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </GridLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

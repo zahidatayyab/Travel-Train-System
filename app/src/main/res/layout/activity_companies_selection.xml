@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompaniesSelection"
+    android:background="@color/colorAppGreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/CompaniesSelectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TTS.AppBarOverlay"
+        android:background="@color/colorAppGreen">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_margin="20sp"
+                android:layout_marginEnd="10sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="handleSelectCompanyBackButton"
+                android:id="@+id/CompaniesSelectionBackButton"
+                android:contentDescription="TODO">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mode"
+                android:layout_toEndOf="@id/CompaniesSelectionBackButton"
+                android:layout_centerVertical="true"
+                android:textSize="22sp"
+                android:textColor="@color/colorOrange"
+                tools:ignore="RtlSymmetry">
+            </TextView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@+id/CompaniesSelectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="handleEconomyCaseButton"
+                android:layout_margin="10sp"
+                app:cardBackgroundColor="@color/colorOrange">
+
+                <GridLayout
+                    android:padding="5sp"
+                    android:columnCount="3"
+                    android:rowCount="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:text="Economy"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"
+                        android:text="Description: "
+                        android:textColor="@color/black"
+                        android:textSize="12sp">
+                    </TextView>
+                    <TextView
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily affordable rides \nwith combination of\n Mini with Airlift "
+                        android:gravity="center_horizontal"
+                        android:id="@+id/uberGoDesc"
+                        android:textColor="@color/colorAppGreen"
+                        android:textSize="12sp">
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="100sp"
+                        android:layout_height="100sp"
+                        android:layout_row="0"
+                        android:layout_rowSpan="4"
+                        android:layout_column="2"
+                        android:src="@drawable/go"
+                        android:layout_gravity="end">
+
+                    </ImageView>
+                </GridLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

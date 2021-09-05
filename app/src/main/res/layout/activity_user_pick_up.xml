@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserPickUp"
+    android:background="@color/colorAppGreen">
+
+    <fragment
+        android:id="@+id/mapPickUp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DeliverTo"
+        android:layout_above="@+id/userPickUpCardView"
+        android:layout_below="@+id/pickUpBar"/>
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/pickUpBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TTS.AppBarOverlay"
+        android:background="@color/colorAppGreen">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_margin="20sp"
+                android:layout_marginEnd="10sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="handleBackButton"
+                android:id="@+id/pickUpBarBackButton"
+                android:contentDescription="TODO">
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginEnd="10sp"
+                android:paddingStart="10sp"
+                android:background="@color/colorOrange"
+                android:text="Select PickUp Location"
+                android:layout_toEndOf="@id/pickUpBarBackButton"
+                android:layout_centerVertical="true"
+                android:paddingVertical="5sp"
+                android:textSize="22sp"
+                android:clickable="true"
+                android:focusable="false"
+                android:textColor="@color/colorBlack"
+                android:id="@+id/userPickUpAddDisplay"
+                android:onClick="handlePickUpLocationTextField"
+                app:drawableStartCompat="@drawable/ic_baseline_search_24"
+                android:drawablePadding="5sp"
+                tools:ignore="RtlSymmetry">
+            </TextView>
+
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:id="@+id/userPickUpCardView"
+        android:layout_height="150sp"
+        app:cardBackgroundColor="@color/colorAppGreen"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginStart="10sp"
+                android:id="@+id/userPickUpAddressLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickup Address: "
+                android:textColor="@color/colorOrange"
+                android:textStyle="bold"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_toRightOf="@+id/userPickUpAddressLabel"
+                android:layout_marginStart="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pickUpAddressDisplay"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp">
+            </TextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:backgroundTint="@color/colorOrange"
+                android:textColor="@color/black"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="handleUserPickUpContinueButton">
+
+            </com.google.android.material.button.MaterialButton>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

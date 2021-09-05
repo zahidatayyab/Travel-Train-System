@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmDetails"
+    android:background="@color/colorAppGreen">
+
+    <fragment
+        android:id="@+id/mapConfirmDetails"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DeliverTo"
+        android:layout_above="@+id/userConfirmDetailsCardView"
+        android:layout_below="@+id/confirmDetailsBar"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/confirmDetailsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.TTS.AppBarOverlay"
+        android:background="@color/colorAppGreen">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back"
+                android:layout_margin="20sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="handleConfirmDetailsBackButton"
+                android:id="@+id/confirmDetailsBackButton">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/confirmDetailsBackButton"
+                android:layout_centerVertical="true"
+                android:text="Confirm Details"
+                android:textSize="22sp"
+                android:textColor="@color/colorOrange"
+                android:id="@+id/userDropOffAddDisplay">
+            </TextView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:id="@+id/userConfirmDetailsCardView"
+        android:layout_height="300sp"
+        app:cardBackgroundColor="@color/colorAppGreen"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PickUp Address:"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:id="@+id/confirmPickupLabel">
+            </TextView>
+
+            <TextView
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/confirmPickupLabel"
+                android:id="@+id/confirmPickUpAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorOrange"
+                android:textSize="14sp">
+            </TextView>
+
+            <TextView
+                android:layout_below="@+id/confirmPickUpAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drop-Off Address:"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:id="@+id/confirmDropOffLabel">
+            </TextView>
+
+
+            <TextView
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/confirmDropOffLabel"
+                android:layout_below="@+id/confirmPickUpAddress"
+                android:id="@+id/confirmDropOffAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorOrange"
+                android:textSize="14sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approx Distance:"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/confirmDropOffAddress"
+                android:id="@+id/approxDistanceLabel">
+            </TextView>
+
+            <TextView
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/approxDistanceLabel"
+                android:layout_below="@+id/confirmDropOffAddress"
+                android:id="@+id/approxDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorOrange"
+                android:textSize="14sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approx Time:"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/approxDistanceLabel"
+                android:id="@+id/approxTimeLabel">
+            </TextView>
+
+            <TextView
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/approxTimeLabel"
+                android:layout_below="@+id/approxDistanceLabel"
+                android:id="@+id/approxTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorOrange"
+                android:textSize="14sp">
+            </TextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:backgroundTint="@color/colorOrange"
+                android:textColor="@color/black"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="handleConfirmDetailsBackButton">
+            </com.google.android.material.button.MaterialButton>
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

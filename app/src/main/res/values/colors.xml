@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0e2433</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#13b3a5</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorFields">#273443</color>
+
+    <color name="colorOrange">#f29949</color>
+    <color name="colorAppGreen">#032026</color>
+
+    <color name="colorRed">#FF0000</color>
+    <color name="colorGreen">#08f269</color>
+    <color name="colorPurple">#443a59</color>
+
+
+    <color name="colorBlue">#0e2433</color>
+    <color name="colorYellow">#FFE338</color>
+    <color name="colorSkyBlue">#8cd3ff</color>
+    <color name="colorGrey">#2d2d2d</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
